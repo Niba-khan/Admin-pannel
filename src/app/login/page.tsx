@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import {
@@ -11,6 +10,8 @@ import {
 import Image from "next/image";
 
 const LoginPage = () => {
+ // ✅ Correct way to use router
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#e9ecef] to-[#32ecc4] p-4">
       <div className="flex flex-col md:flex-row items-center gap-10 w-full max-w-4xl p-8 md:p-12 bg-white shadow-xl rounded-lg transition-transform duration-300 hover:scale-105">
@@ -99,7 +100,8 @@ const LoginPage = () => {
             </form>
             <div className="flex justify-center w-full mt-5">
               <div className="w-full rounded-md bg-[#32ecc4] p-3 text-white text-center font-medium hover:bg-[#027a8a] transition duration-300 cursor-pointer shadow-lg">
-                <SignInButton mode="modal" />
+              <SignInButton mode="redirect" />
+
               </div>
             </div>
             <p className="mt-4 text-center text-sm text-gray-600">
